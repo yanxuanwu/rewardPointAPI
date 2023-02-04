@@ -37,6 +37,6 @@ public class customerController {
 
     @PostMapping("/user/{id}")
     public ResponseEntity<ShoppingTransaction> addTransactionToCustomer(@RequestBody ShoppingTransaction trans){
-        return new ResponseEntity<>(customerService.addTransaction(trans), HttpStatus.CREATED);
+        return new ResponseEntity<>(customerService.addTransaction(trans), HttpStatus.NO_CONTENT);
     }
 }
